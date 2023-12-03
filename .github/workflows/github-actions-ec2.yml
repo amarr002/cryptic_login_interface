@@ -15,16 +15,6 @@ jobs:
       - name: Checkout the files
         uses: actions/checkout@v2
 
-        
-      # - name: Use Node.js 16
-      #   uses: actions/setup-node@v4
-      #   with:
-      #     node-version: 16
-
-      # - name: Install dependencies
-      #   run: |
-      #     npm install
-      #   # Add any other setup steps you need
       - name: Use Node.js 16
         uses: actions/setup-node@v4
         with:
@@ -32,11 +22,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
-      - name: Install Node.js 12 for easingthemes/ssh-deploy
-        run: |
-          curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-          sudo apt-get install -y nodejs
 
       - name: Deploy to Server 1
         uses: easingthemes/ssh-deploy@main
