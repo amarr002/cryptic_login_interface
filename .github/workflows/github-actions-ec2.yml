@@ -27,7 +27,7 @@ jobs:
       #   # Add any other setup steps you need
 
       - name: Deploy to Server 1
-        uses: easingthemes/ssh-deploy@master
+        uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
